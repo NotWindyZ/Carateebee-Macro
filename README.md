@@ -66,4 +66,46 @@ Your OCR failsafe needs a tune-up. Push your mouse delay up to 1000–2000 milli
 <details>
 <summary><b>The macro looks up an item and immediately closes?</b></summary>
 <blockquote>
-Either recalibrate your OCR-failsafe or
+Either recalibrate your OCR-failsafe or completely disable the option. If you still want a safety net without using it, just bump your input delay up to 1000–2000 milliseconds.
+</blockquote>
+</details>
+
+<details>
+<summary><b>I set up the OCR-failsafe but it still reads items wrong?</b></summary>
+<blockquote>
+Swap your game font to a standard, clean text style—preferably <b>Arial</b> or <b>Rubik</b>.
+</blockquote>
+</details>
+
+<details>
+<summary><b>What exactly counts as the first item slot?</b></summary>
+<blockquote>
+Check this reference photo: <a href="https://postimg.cc">Item Slot Reference Image</a>.
+</blockquote>
+</details>
+
+### Interaction & Fishing
+<details>
+<summary><b>Why isn't it pressing "E" when a merchant appears?</b></summary>
+<blockquote>
+Check your millisecond input delay field. If it's completely empty, the macro breaks. If you want it fast without issues, just type <code>0</code>.
+</blockquote>
+</details>
+
+<details>
+<summary><b>The macro keeps spamming the reel?</b></summary>
+<blockquote>
+Your midbar color sample is off. Give it a fresh calibration.
+</blockquote>
+</details>
+
+<details>
+<summary><b>The macro keeps spamming the fish button?</b></summary>
+<blockquote>
+Your fishing pixel detection needs to be recalibrated.
+</blockquote>
+</details>
+
+---
+
+**Still broken?** If none of these steps patch your issue, wipe everything and do a clean re-installation. If it's still acting up, drop a message in our support forum inside the [Discord server](discord.gg/coteab)!
