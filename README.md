@@ -12,7 +12,7 @@ A Sol's RNG Coteab Macro that heavily customized theme for Umamusume!! (Which is
 ---
 
 ## Quick Contact
-* Coteab Macro maintained by **Vapure** (aka *criticize.* / *C*), **Akito**. 
+* Coteab Macro maintained by **Vapure** (aka *criticize.* / *C*), **Akito (NotWindyZ)**. 
 * You've probably seen us hanging around other Sol's RNG community servers.
 * Reach out on Discord or drop an email at `work.vapure@gmail.com`.
 
