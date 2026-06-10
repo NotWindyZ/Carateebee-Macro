@@ -293,7 +293,7 @@ class WebhookMixin:
         }
         if event_type == "start":
             embed["thumbnail"] = {"url": biome_info["thumbnail_url"]}
-
+        
         for webhook_url in urls:
             try:
                 headers = {}

@@ -9,8 +9,8 @@ class DetectionMixin:
         return []
 
     def load_biome_data(self):
-        url = "https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/assets/biomes_data.json"
-        eventUrl = "https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/assets/active_events.json"
+        url = "https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/assets/biomes_data.json"
+        eventUrl = "https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/assets/active_events.json"
 
         default_biome_data = {
             "NORMAL": {
@@ -19,7 +19,7 @@ class DetectionMixin:
             },
             "EGGLAND": {
                 "color": "0xd4fc8d",
-                "thumbnail_url": "https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/images/EGGLAND.png"
+                "thumbnail_url": "https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/images/EGGLAND.png"
             },  
             "WINDY": {
                 "color": "0x9ae5ff",
@@ -63,7 +63,7 @@ class DetectionMixin:
             },
             "CYBERSPACE": {
                 "color": "0x0A1A3D",
-                "thumbnail_url": "https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/images/CYBERSPACE.png"
+                "thumbnail_url": "https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/images/CYBERSPACE.png"
             }
         }
 
@@ -199,7 +199,7 @@ class DetectionMixin:
             self.error_logging(e, "Error in take_aura_screenshot_now")
 
     def open_customize_biome_embed(self):
-        event_url = "https://raw.githubusercontent.com/xVapure/Noteab-Macro/main/active_events.json"
+        event_url = "https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/reworked-main/active_events.json"
         try:
             r = requests.get(event_url, timeout=5)
             r.raise_for_status()
@@ -428,7 +428,7 @@ class DetectionMixin:
         self.config["session_window_start"] = self.session_window_start.isoformat()
         self.config["macro_last_start"] = now.isoformat()
         self.save_config()
-        self.set_title_threadsafe(f"""Coteab Macro {current_ver} (Running)""")
+        self.set_title_threadsafe(f"""Carateebee Macro ({current_ver}) (Running)""")
         self.send_webhook_status("Macro started!", color=0x64ff5e)
 
         threads = [
@@ -506,7 +506,7 @@ class DetectionMixin:
         self.saved_session += elapsed_time
         self.start_time = None
         self.stop_sent = True
-        self.set_title_threadsafe(f"Coteab Macro {current_ver} (Stopped)")
+        self.set_title_threadsafe(f"Carateebee Macro ({current_ver}) (Stopped)")
         self.send_macro_summary(last24h_seconds)
         print("closed", self.current_session)
         self.save_config()
@@ -690,7 +690,7 @@ class DetectionMixin:
             return lines
 
     def load_auras_json(self):
-        url = "https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/assets/auras.json"
+        url = "https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/assets/auras.json"
         try:
             r = requests.get(url, timeout=1)
             r.raise_for_status()
@@ -853,7 +853,7 @@ class DetectionMixin:
                             
                             self.biome_data[biome] = {
                                 "color": "0xffffff",
-                                "thumbnail_url": "https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/images/biome_placeholder.png"
+                                "thumbnail_url": "https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/images/biome_placeholder.png"
                             }
                             
                         # Set "Message" default for event biome whenever sol dev added to da game 
@@ -1062,7 +1062,7 @@ class DetectionMixin:
             self.just_reconnected = True
             self._roblox_fullscreened = False
             self.reconnect_confirm_deadline = time.monotonic() + 60
-            self.set_title_threadsafe(f"""Coteab Macro {current_ver} (Running)""")
+            self.set_title_threadsafe(f"""Carateebee Macro ({current_ver}) (Running)""")
             self.save_config()
         except Exception as e:
             self.error_logging(e, "_resume_timer_after_reconnect")

@@ -16,7 +16,7 @@ class ActionsMixin:
             except Exception:
                 source_paths = None
 
-            base_url = "https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/paths/"
+            base_url = "https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/paths/"
             for filename in ["obby.json", "eden.json", "egg_route1.json", "egg_route2.json", "egg_route3.json"]:
                 file_path = os.path.join(paths_folder, filename)
                 if not os.path.exists(file_path):
@@ -103,7 +103,7 @@ class ActionsMixin:
             return ""
 
     def load_notice_tab(self):
-        url = "https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/assets/noticetabcontents.txt"
+        url = "https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/assets/noticetabcontents.txt"
         data = ""
         try:
             r = requests.get(url, timeout=10)
@@ -173,8 +173,8 @@ class ActionsMixin:
 
     def _get_update_api_url(self):
         return os.environ.get(
-            "COTEAB_UPDATE_API_URL",
-            "https://api.github.com/repos/xVapure/Noteab-Macro/releases/latest",
+            "CARATEEBEE_UPDATE_API_URL",
+            "https://api.github.com/repos/NotWindyZ/Carateebee-Macro/releases/latest",
         )
 
     def _normalize_version(self, value):
@@ -206,10 +206,10 @@ class ActionsMixin:
             return "", ""
 
         preferred = {
-            "coteabmacro.exe",
-            "coteab macro.exe",
-            "coteab_macro.exe",
-            "coteab-macro.exe",
+            "carateebeemacro.exe",
+            "carateebee macro.exe",
+            "carateebee_macro.exe",
+            "carateebee-macro.exe",
         }
         exe_candidates = []
         for asset in assets:
@@ -248,12 +248,12 @@ class ActionsMixin:
             print(f"Failed to spawn detached EXE: {e}")
             return False
 
-    def _download_and_stage_exe_update(self, download_url, asset_name="CoteabMacro.exe"):
+    def _download_and_stage_exe_update(self, download_url, asset_name="carateebeemacro.exe"):
         if not getattr(sys, "frozen", False):
             return False
 
         current_dir = os.path.dirname(os.path.abspath(sys.executable))
-        temp_exe = os.path.join(current_dir, "CoteabMacro1.exe")
+        temp_exe = os.path.join(current_dir, "carateebeemacro1.exe")
 
         try:
             if os.path.exists(temp_exe):
@@ -272,12 +272,12 @@ class ActionsMixin:
         if not os.path.exists(temp_exe) or os.path.getsize(temp_exe) <= 0:
             raise RuntimeError("Downloaded update file is empty")
 
-        canonical_exe = os.path.join(current_dir, "CoteabMacro.exe")
+        canonical_exe = os.path.join(current_dir, "carateebeemacro.exe")
         args = [
-            "--coteab-finalize-update",
-            "--coteab-target",
+            "--carateebee-finalize-update",
+            "--carateebee-target",
             canonical_exe,
-            "--coteab-old-pid",
+            "--carateebee-old-pid",
             str(os.getpid()),
         ]
         if not self._spawn_detached_exe(temp_exe, args):
@@ -294,7 +294,7 @@ class ActionsMixin:
         except Exception:
             return False
 
-    def maybe_self_rename_to_canonical_exe(self, canonical_target="CoteabMacro.exe", old_pid=None):
+    def maybe_self_rename_to_canonical_exe(self, canonical_target="carateebeemacro.exe", old_pid=None):
         try:
             if not getattr(sys, "frozen", False):
                 return False
@@ -305,7 +305,7 @@ class ActionsMixin:
             if not current_name.lower().endswith(".exe"):
                 return False
 
-            canonical_raw = str(canonical_target or "CoteabMacro.exe").strip() or "CoteabMacro.exe"
+            canonical_raw = str(canonical_target or "carateebeemacro.exe").strip() or "carateebeemacro.exe"
             if not canonical_raw.lower().endswith(".exe"):
                 canonical_raw += ".exe"
 
@@ -340,10 +340,10 @@ class ActionsMixin:
             print(f"Failed to normalize executable name: {e}")
             return False
 
-    def _download_exe_to_folder(self, download_url, target_dir, asset_name="CoteabMacro.exe"):
+    def _download_exe_to_folder(self, download_url, target_dir, asset_name="carateebeemacro.exe"):
         os.makedirs(target_dir, exist_ok=True)
 
-        base_name = os.path.basename(str(asset_name or "").strip()) or "CoteabMacro.exe"
+        base_name = os.path.basename(str(asset_name or "").strip()) or "carateebeemacro.exe"
         if not base_name.lower().endswith(".exe"):
             base_name += ".exe"
 
@@ -383,7 +383,7 @@ class ActionsMixin:
                 print("Update available, but no .exe asset was found in latest release.")
                 return False
 
-            print("hold up downloading the new Coteab Macro update bro")
+            print("hold up downloading the new Carateebee Macro update bro")
             if self._download_and_stage_exe_update(download_url, asset_name=asset_name):
                 print(f"Update {latest_version} downloaded. Restarting into the new executable...")
                 return True
@@ -422,7 +422,7 @@ class ActionsMixin:
             if hasattr(self, "on_update_status") and callable(self.on_update_status):
                 self.on_update_status("downloading")
 
-            guessed_name = os.path.basename(str(download_url).split("?", 1)[0]) or "CoteabMacro.exe"
+            guessed_name = os.path.basename(str(download_url).split("?", 1)[0]) or "carateebeemacro.exe"
             if getattr(sys, "frozen", False):
                 self._download_and_stage_exe_update(download_url, asset_name=guessed_name)
 
@@ -590,7 +590,7 @@ class ActionsMixin:
             "description": desc,
             "color": color,
             "timestamp": ts_iso,
-            "footer": {"text": "Coteab Macro • Player Logger"},
+            "footer": {"text": "Carateebee Macro • Player Logger"},
             "fields": fields
         }
         return embed
@@ -2855,7 +2855,7 @@ class ActionsMixin:
                                 self.terminate_roblox_processes()
                                 self.send_webhook_status(f"Reconnecting to your server. hold on bro", color=0xffff00)
                                 self.set_title_threadsafe(
-                                    f"""Coteab Macro {current_ver} (Reconnecting)""")
+                                    f"""Carateebee Macro {current_ver} (Reconnecting)""")
                                 launched = False
                                 launch_err = None
                                 for deep_link in reconnect_deep_links:
@@ -2916,7 +2916,7 @@ class ActionsMixin:
     def reconnect_check_start_button(self, old_log_file=None):
         try:
             self.set_title_threadsafe(
-                f"""Coteab Macro {current_ver} (Reconnecting - In Main Menu)""")
+                f"""Carateebee Macro {current_ver} (Reconnecting - In Main Menu)""")
             reconnect_start_button = self.config.get("reconnect_start_button", [954, 876])
 
             for _ in range(10):
@@ -2937,7 +2937,7 @@ class ActionsMixin:
                     self.send_webhook_status("Clicked 'Start' button and you are in the game now!!", color=0x4aff65)
                     print("Game has started, exiting click loop.")
                     self.detection_running = True
-                    self.set_title_threadsafe(f"""Coteab Macro {current_ver} (Running)""")
+                    self.set_title_threadsafe(f"""Carateebee Macro {current_ver} (Running)""")
                     return True  # weii joins!!!!!!!!!!
 
                 time.sleep(click_interval)
@@ -2978,7 +2978,7 @@ class ActionsMixin:
                 self.pause_reason = reason
             self.reconnecting_state = True
             self.set_title_threadsafe(
-                f"""Coteab Macro {current_ver} (Roblox Disconnected :c )""")
+                f"""Carateebee Macro {current_ver} (Roblox Disconnected :c )""")
             if reason and not getattr(self, 'has_sent_disconnected_message', False):
                 try:
                     self.send_webhook_status(reason, color=0xff0000)

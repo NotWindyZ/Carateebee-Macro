@@ -342,9 +342,9 @@ class ConfigMixin:
                 "custom_biome_overrides": {
                     "AURORA": { "color": "0x0047ab", "thumbnail_url": "https://raw.githubusercontent.com/vexthecoder/OysterDetector/main/assets/aurora.png" },
                     "CORRUPTION": { "color": "0x6d32a8", "thumbnail_url": "https://maxstellar.github.io/biome_thumb/CORRUPTION.png" },
-                    "CYBERSPACE": { "color": "0x0A1A3D", "thumbnail_url": "https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/images/CYBERSPACE.png" },
-                    "DREAMSPACE": { "color": "0xea9dda", "thumbnail_url": "http://github.com/xVapure/Noteab-Macro/blob/main/images/Screenshot_2026-01-03_021107.png?raw=true" },
-                    "EGGLAND": { "color": "0xd4fc8d", "thumbnail_url": "https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/images/EGGLAND.png" },
+                    "CYBERSPACE": { "color": "0x0A1A3D", "thumbnail_url": "https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/images/CYBERSPACE.png" },
+                    "DREAMSPACE": { "color": "0xea9dda", "thumbnail_url": "http://github.com/NotWindyZ/Carateebee-Macro/blob/main/images/Screenshot_2026-01-03_021107.png?raw=true" },
+                    "EGGLAND": { "color": "0xd4fc8d", "thumbnail_url": "https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/images/EGGLAND.png" },
                     "GLITCHED": { "color": "0xbfff00", "thumbnail_url": "https://maxstellar.github.io/biome_thumb/GLITCHED.png" },
                     "HEAVEN": { "color": "0xFFE8A0", "thumbnail_url": "https://maxstellar.github.io/biome_thumb/HEAVEN.png" },
                     "HELL": { "color": "0xff4719", "thumbnail_url": "https://maxstellar.github.io/biome_thumb/HELL.png" },
@@ -352,7 +352,7 @@ class ConfigMixin:
                     "NULL": { "color": "0x838383", "thumbnail_url": "https://maxstellar.github.io/biome_thumb/NULL.png" },
                     "RAINY": { "color": "0x027cbd", "thumbnail_url": "https://maxstellar.github.io/biome_thumb/RAINY.png" },
                     "SAND STORM": { "color": "0x8F7057", "thumbnail_url": "https://maxstellar.github.io/biome_thumb/SAND%20STORM.png" },
-                    "SINGULARITY": { "color": "0xcf4023", "thumbnail_url": "https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/images/SINGULARITY.png" },
+                    "SINGULARITY": { "color": "0xcf4023", "thumbnail_url": "https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/images/SINGULARITY.png" },
                     "SNOWY": { "color": "0xDceff9", "thumbnail_url": "https://maxstellar.github.io/biome_thumb/SNOWY.png" },
                     "STARFALL": { "color": "0x011ab7", "thumbnail_url": "https://maxstellar.github.io/biome_thumb/STARFALL.png" },
                     "WINDY": { "color": "0xF2F6FF", "thumbnail_url": "https://maxstellar.github.io/biome_thumb/WINDY.png" }
