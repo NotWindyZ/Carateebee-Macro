@@ -108,4 +108,4 @@ Your fishing pixel detection needs to be recalibrated.
 
 ---
 
-**Still broken?** If none of these steps patch your issue, wipe everything and do a clean re-installation. If it's still acting up, drop a message in our support forum inside the [Discord server](discord.gg/coteab)!
+**Still broken?** If none of these steps patch your issue, wipe everything and do a clean re-installation. If it's still acting up, drop a message in our support forum inside the [Discord server](https://discord.gg/coteab)!
