@@ -66,7 +66,7 @@ export default function NoticePage() {
             </div>
 
             <div className="info-banner">
-                📺 New to Coteab? Watch the tutorial:{" "}
+                📺 New to Carateebee? Watch the tutorial:{" "}
                 <a href="https://www.youtube.com/watch?v=dZzQytUMlCE" target="_blank" rel="noreferrer">
                     https://www.youtube.com/watch?v=dZzQytUMlCE
                 </a>
@@ -85,7 +85,7 @@ export default function NoticePage() {
             )}
 
             <div className="info-banner" style={{ marginTop: "16px" }}>
-                🌐 <a href="https://discord.gg/coteab" target="_blank" rel="noreferrer">JOIN OUR DEVELOPMENT SERVER</a> to keep in touch with the latest Coteab Macro updates!
+                🌐 <a href="https://discord.gg/coteab" target="_blank" rel="noreferrer">JOIN OUR DEVELOPMENT SERVER</a> to keep in touch with the latest Carateebee Macro updates!
             </div>
         </>
     );

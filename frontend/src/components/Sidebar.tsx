@@ -155,7 +155,7 @@ export default function Sidebar({ activeTab, onTabChange, isGlitching, macroVers
 
             <div className="sidebar-footer">
                 <div className="by-line">
-                    Coteab Macro made by <span>Coteab Development Team</span>
+                    Carateebee Macro made by <span>Carateebee Development Team</span>
                 </div>
             </div>
         </div>

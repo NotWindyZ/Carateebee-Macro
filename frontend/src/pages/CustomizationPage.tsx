@@ -250,7 +250,7 @@ export default function CustomizationPage() {
                                         marginTop: "4px" 
                                     }}>
                                         <img src="https://i.postimg.cc/rsXpGncL/Noteab-Biome-Tracker.png" style={{ width: "16px", height: "16px", borderRadius: "50%" }} alt="footer" />
-                                        <span style={{ color: "#949BA4", fontSize: "11px", fontWeight: "500" }}>Coteab Macro v2.1.6-beta1 • Today at {now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+                                        <span style={{ color: "#949BA4", fontSize: "11px", fontWeight: "500" }}>Carateebee Macro v2.1.6-beta1 • Today at {now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
                                     </div>
                                 </div>
                                 

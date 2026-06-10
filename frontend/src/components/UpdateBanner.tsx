@@ -45,7 +45,7 @@ export default function UpdateBanner({ version, downloadUrl, updateStatus, onDis
                             ? `Updated! ${doneFilename || "Restarting"}`
                             : isUpdating
                                 ? "Downloading update..."
-                                : `New Coteab Macro ${version} is available!!!`
+                                : `New Carateebee Macro ${version} is available!!!`
                     }
                 </span>
             </div>

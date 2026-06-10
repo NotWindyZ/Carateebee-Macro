@@ -3,7 +3,7 @@ export default function CreditsPage() {
         <>
             <div className="page-header">
                 <h2>Credits</h2>
-                <p>The people behind Coteab Macro</p>
+                <p>The people behind Carateebee Macro</p>
             </div>
 
             
@@ -40,7 +40,7 @@ export default function CreditsPage() {
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px", marginTop: "16px" }}>
                     <a href="https://discord.gg/coteab" target="_blank" rel="noreferrer"
                         style={{ color: "var(--accent)", textDecoration: "underline" }}>
-                        Join the Coteab Discord server!!!
+                        Join the Carateebee Discord server!!!
                     </a>
                     <a href="https://github.com/NotWindyZ/Carateebee-Macro" target="_blank" rel="noreferrer" style={{ color: "var(--accent)", fontSize: "13px" }}>
                         GitHub: Carateebee Macro!
@@ -102,7 +102,7 @@ export default function CreditsPage() {
             </div>
 
             <div className="info-banner" style={{ marginTop: "16px" }}>
-                🌐 <a href="https://discord.gg/coteab" target="_blank" rel="noreferrer">JOIN OUR DEVELOPMENT SERVER</a> to keep in touch with the latest Coteab Macro updates!
+                🌐 <a href="https://discord.gg/coteab" target="_blank" rel="noreferrer">JOIN OUR DEVELOPMENT SERVER</a> to keep in touch with the latest Carateebee Macro updates!
             </div>
         </>
     );

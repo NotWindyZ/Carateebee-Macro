@@ -339,7 +339,7 @@ function App() {
       if (!cancelled) {
         setMacroVersion(version);
       }
-      document.title = `Coteab Macro ${version}`;
+      document.title = `Carateebee Macro ${version}`;
       return true;
     };
 
