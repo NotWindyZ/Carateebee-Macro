@@ -4,7 +4,7 @@ export default function DonationsPage() {
     const [donators, setDonators] = useState<string>("Loading appreciation list...");
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/assets/appreciation_list.txt")
+        fetch("https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/assets/appreciation_list.txt")
             .then(res => res.text())
             .then(text => setDonators(text))
             .catch(err => setDonators("Unable to load appreciation list.\n" + err));

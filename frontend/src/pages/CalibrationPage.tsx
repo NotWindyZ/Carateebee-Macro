@@ -349,7 +349,7 @@ export default function CalibrationPage() {
     const [pendingPreset, setPendingPreset] = useState<any>(null);
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/assets/macro_calibs_preset.json")
+        fetch("https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/assets/macro_calibs_preset.json")
             .then(res => res.json())
             .then(data => {
                 if (data && Array.isArray(data.presets)) {

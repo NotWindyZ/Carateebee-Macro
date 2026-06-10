@@ -22,6 +22,7 @@ const SEARCH_INDEX = [
     { title: "Remote Access", tab: "remoteaccess", keywords: ["remote", "access", "control", "api", "discord bot"] },
     { title: "Customization", tab: "customization", keywords: ["custom", "background", "image", "theme"] }
 ];
+import startStopBorder from "../icons/start_stop_border.png";
 
 export default function HeaderBar({ isRunning, onToggle, isGlitching, setActiveTab }: HeaderBarProps) {
     const [alwaysOnTop, setAlwaysOnTop] = useState(false);
@@ -111,7 +112,15 @@ export default function HeaderBar({ isRunning, onToggle, isGlitching, setActiveT
                         padding: "4px 12px",
                         fontSize: "12px",
                         whiteSpace: "nowrap",
-                        flexShrink: 0
+                        flexShrink: 0,
+                        backgroundImage: `url(${startStopBorder})`,
+                        backgroundSize: "100% 100%",
+                        backgroundRepeat: "no-repeat",
+                        backgroundColor: "transparent",
+                        border: "none",
+                        color: "#333",
+                        fontWeight: 800,
+                        textShadow: "0px 1px 1px rgba(255,255,255,0.8)"
                     }}
                 >
                     {isRunning ? "■ Stop (F2)" : "▶ Start (F1)"}

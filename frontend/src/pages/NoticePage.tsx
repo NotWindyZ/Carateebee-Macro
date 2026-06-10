@@ -6,7 +6,7 @@ export default function NoticePage() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/assets/noticetabcontents.txt")
+        fetch("https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/assets/noticetabcontents.txt")
             .then(res => res.text())
             .then(text => {
                 setContent(text);

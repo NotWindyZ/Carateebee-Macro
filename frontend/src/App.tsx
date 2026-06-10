@@ -26,6 +26,7 @@ import MovementsPage from "./pages/MovementsPage";
 import RecorderWindow from "./pages/RecorderWindow";
 import BiomeConfirmWindow from "./pages/BiomeConfirmWindow";
 import BackgroundAnimation from "./components/BackgroundAnimation";
+import JukeboxPage from "./pages/JukeboxPage";
 
 const isSafeMode = new URLSearchParams(window.location.search).get("safe_mode");
 if (isSafeMode && !(window as any).pywebview) {
@@ -94,6 +95,7 @@ const pages: Record<string, React.FC> = {
   customization: CustomizationPage,
   credits: CreditsPage,
   donations: DonationsPage,
+  jukebox: JukeboxPage,
 
 };
 
@@ -441,8 +443,16 @@ function App() {
             />
           )}
           <div className="page-content">
-            <div className="page-slide" key={activeTab}>
-              <ActivePage />
+            {activeTab !== "jukebox" && (
+              <div className="page-slide" key={activeTab}>
+                <ActivePage />
+              </div>
+            )}
+            <div
+              className={activeTab === "jukebox" ? "page-slide" : ""}
+              style={activeTab === "jukebox" ? { height: "100%", width: "100%" } : { display: "none", height: "100%", width: "100%" }}
+            >
+              <JukeboxPage />
             </div>
           </div>
         </div>

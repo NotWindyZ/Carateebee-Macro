@@ -83,9 +83,9 @@ except Exception as e:
 
 # i added this so we can easily change macro version upon releases without having to change multiple back-end & front-end behaviours
 # for future people that is reading the open source code, hello :p
-current_version = "v2.1.8-hotfix1"
+current_version = "umacaratto-2.1.9"
 os.environ["COTEAB_MACRO_VERSION"] = current_version
-UPDATE_LATEST_RELEASE_API_URL = "https://api.github.com/repos/xVapure/Noteab-Macro/releases/latest"
+UPDATE_LATEST_RELEASE_API_URL = "https://api.github.com/repos/NotWindyZ/Carateebee-Macro/releases/latest"
 os.environ["COTEAB_UPDATE_API_URL"] = UPDATE_LATEST_RELEASE_API_URL
 os.environ["WEBKIT_DISABLE_COMPOSITING_MODE"] = "1" 
 
@@ -147,14 +147,12 @@ def get_frontend_entry():
         if os.path.exists(index_file):
             try:
                 abs_path = os.path.abspath(index_file).replace("\\", "/")
-                with open(index_file, "r", encoding="utf-8") as f:
-                    html_content = f.read()
                 print(f"Loading frontend from local: {abs_path}")
-                return {"html": html_content, "url": f"file:///{abs_path}"}
+                return {"url": abs_path}
             except Exception as e:
                 print(f"Error reading local index.html: {e}")
 
-    frontend_url = "https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/assets/index.html"
+    frontend_url = "https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/assets/index.html"
     try:
         from biome_tracker.config import APPDATA_BASE
         appdata_dist = os.path.join(str(APPDATA_BASE), "dist")
@@ -168,7 +166,7 @@ def get_frontend_entry():
                 with open(saved_path, "w", encoding="utf-8") as f: f.write(html_content)
                 abs_path = os.path.abspath(saved_path).replace("\\", "/")
                 print(f"Fetched frontend from GitHub -> saved to: {abs_path}")
-                return {"html": html_content, "url": f"file:///{abs_path}"}
+                return {"url": abs_path}
     except Exception as e:
         print(f"Failed to fetch frontend from GitHub: {e}")
 
@@ -1175,7 +1173,7 @@ def launch_app(api_class, tracker=None):
 
     fe = get_frontend_entry()
     win_args = {
-        "title": f"Coteab Macro {current_version}",
+        "title": f"Carateebee Macro ({current_version})",
         "js_api": api,
         "width": 985, "height": 550,
         "min_size": (550, 500),
@@ -1262,7 +1260,7 @@ def main():
     try:
         fe = get_frontend_entry()
         win_args = {
-            "title": f"Coteab Macro {current_version}",
+            "title": f"Carateebee Macro ({current_version})",
             "js_api": api,
             "width": 985, "height": 550,
             "min_size": (550, 500),
@@ -1362,10 +1360,10 @@ def main():
         logging.getLogger("pywebview").addHandler(_WvLog())
 
         try:
-            webview.start(func=_background_init, debug=False, gui="edgechromium", private_mode=False)
+            webview.start(func=_background_init, debug=False, gui="edgechromium", private_mode=False, http_server=True)
         except Exception as e:
             print(f"[Webview] edgechromium failed: {e}")
-            try: webview.start(func=_background_init, debug=False, private_mode=False)
+            try: webview.start(func=_background_init, debug=False, private_mode=False, http_server=True)
             except Exception as e2:
                 print(f"[Webview] Default backend also failed: {e2}")
 

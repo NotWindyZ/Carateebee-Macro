@@ -247,8 +247,10 @@ export default function AutoPopBuffPage() {
                                     gap: "12px",
                                     alignItems: "center",
                                     padding: "12px 14px",
-                                    border: "1px solid var(--border-color)",
-                                    background: biomeEntry.enabled ? "rgba(255,255,255,0.04)" : "rgba(255,255,255,0.02)",
+                                    border: "1px solid var(--border)",
+                                    background: biomeEntry.enabled ? "rgba(255,255,255,0.1)" : "rgba(255,255,255,0.05)",
+                                    backdropFilter: "blur(4px)",
+                                    WebkitBackdropFilter: "blur(4px)"
                                 }}
                             >
                                 <div>

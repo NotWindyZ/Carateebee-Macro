@@ -10,7 +10,7 @@ export default function CreditsPage() {
             <div className="card">
                 <div style={{ display: "flex", justifyContent: "center", marginBottom: "16px" }}>
                     <img
-                        src="https://raw.githubusercontent.com/xVapure/Noteab-Macro/refs/heads/main/images/devteam.png"
+                        src="https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/images/devteam.png"
                         alt="Dev Team"
                         style={{
                             width: "300px",
@@ -42,8 +42,8 @@ export default function CreditsPage() {
                         style={{ color: "var(--accent)", textDecoration: "underline" }}>
                         Join the Coteab Discord server!!!
                     </a>
-                    <a href="https://github.com/xVapure/Noteab-Macro" target="_blank" rel="noreferrer" style={{ color: "var(--accent)", fontSize: "13px" }}>
-                        GitHub: Coteab Macro!
+                    <a href="https://github.com/NotWindyZ/Carateebee-Macro" target="_blank" rel="noreferrer" style={{ color: "var(--accent)", fontSize: "13px" }}>
+                        GitHub: Carateebee Macro!
                     </a>
                 </div>
             </div>

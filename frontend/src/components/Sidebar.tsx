@@ -23,6 +23,7 @@ import movementIcon from "../icons/movement.png";
 import autopopIcon from "../icons/uma_autopop.png";
 import otherfeatureIcon from "../icons/otherfeature.png";
 import kitasanIcon from "../icons/kitasandrinkwater.png";
+import jukeboxIcon from "../icons/uma_jukebox.png";
 
 const SidebarItem = ({ item, isActive, onClick, isGlitching, locked }: { item: any; isActive: boolean; onClick: () => void; isGlitching: boolean; locked?: boolean }) => {
     const label = useGlitchText(item.label || "", isGlitching);
@@ -53,9 +54,9 @@ const navItems = [
     { id: "status", label: "Status", icon: "🐴", imgIcon: statusIcon },
     { id: "stats", label: "Stats", icon: "🏆", imgIcon: statsIcon },
     { section: "Configuration" },
+    { id: "webhook", label: "Webhook", icon: "📱", imgIcon: settingIcon },
     { id: "misc", label: "Automated actions", icon: "⚙️", imgIcon: settingIcon },
     { id: "calibrations", label: "Macro Calibrations", icon: "⚙️", imgIcon: settingIcon },
-    { id: "webhook", label: "Webhook", icon: "📱", imgIcon: settingIcon },
     { id: "remoteaccess", label: "Remote Control", icon: "🎮", imgIcon: settingIcon },
     { id: "customization", label: "Customizations", icon: "⚙️", imgIcon: settingIcon },
     { section: "Main Features" },
@@ -69,6 +70,7 @@ const navItems = [
     { section: "Information" },
     { id: "credits", label: "Credits", icon: "🤝", imgIcon: creditsIcon },
     { id: "donations", label: "Donations <3", icon: "💎", imgIcon: donationIcon },
+    { id: "jukebox", label: "Jukebox", icon: "🎶", imgIcon: jukeboxIcon },
 ];
 
 export default function Sidebar({ activeTab, onTabChange, isGlitching, macroVersion }: SidebarProps) {
