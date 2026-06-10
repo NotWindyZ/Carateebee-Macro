@@ -1,6 +1,6 @@
 # <img src="https://github.com/NotWindyZ/Carateebee-Macro/raw/reworked-main/images/carat.png" width="45" height="45" alt="Logo" align="center" /> Carateebee Macro
 
-A Sol's RNG Coteab Macro that heavily customized theme for Umamusume!! (Forked from the original [Noteab's Biome Macro](https://github.com/xVapure/Noteab-Macro) under the [Apache 2.0 license](https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/LICENSE.txt))
+A Sol's RNG Coteab Macro that heavily customized theme for Umamusume!! (Which is forked from the [Coteab's Macro](https://github.com/xVapure/Noteab-Macro) under the [Apache 2.0 license](https://raw.githubusercontent.com/NotWindyZ/Carateebee-Macro/refs/heads/reworked-main/LICENSE.txt))
 
 <p align="left">
   <img src="https://img.shields.io/github/downloads/NotWindyZ/Carateebee-Macro/total" alt="Downloads">
