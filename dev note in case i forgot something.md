@@ -64,13 +64,13 @@ pip install -r requirements.txt
 ### Option 1: PyInstaller (must use Python 3.8-3.14)
 
 ```bash
-pyinstaller --name="Carateebee_Macro " --noconsole --onefile --icon="lib/official_release.ico" --add-data "lib;lib" --add-data "C:\Users\Akitosama\AppData\Local\Programs\Python\Python312\Lib\site-packages\autoit\lib\AutoItX3_x64.dll;autoit\lib" --collect-all webview --collect-all discord --upx-dir "C:\Users\Akitosama\Documents\upx-5.1.0-win64" main.py
+pyinstaller --name="Carateebee_Macro" --noconsole --onefile --icon="lib/official_release.ico" --add-data "lib;lib" --add-data "C:\Users\Akitosama\AppData\Local\Programs\Python\Python312\Lib\site-packages\autoit\lib\AutoItX3_x64.dll;autoit\lib" --collect-all webview --collect-all discord --upx-dir "C:\Users\Akitosama\Documents\upx-5.1.0-win64" main.py
 ```
 
 ### No UPX flag:
 
 ```bash
-pyinstaller --name="Carateebee_Macro " --noconsole --onefile --noupx --icon="lib/official_release.ico" --add-data "lib;lib" --add-data "C:\Users\Akitosama\AppData\Local\Programs\Python\Python312\Lib\site-packages\autoit\lib\AutoItX3_x64.dll;autoit\lib" --collect-all webview --collect-all discord main.py
+pyinstaller --name="Carateebee_Macro" --noconsole --onefile --noupx --icon="lib/official_release.ico" --add-data "lib;lib" --add-data "C:\Users\Akitosama\AppData\Local\Programs\Python\Python312\Lib\site-packages\autoit\lib\AutoItX3_x64.dll;autoit\lib" --collect-all webview --collect-all discord main.py
 ```
 
 ### Option 1.2: PyInstaller in isolated enviroment (aka venv) (must use Python 3.8-3.14)
@@ -118,16 +118,16 @@ npm run build
 **Step 6:** Compile the EXE:
 
 ```bash
-pyinstaller --name="Carateebee_Macro " --noconsole --onefile --icon="lib/official_release.ico" --add-data "lib;lib" --add-data "venv_build\Lib\site-packages\autoit\lib\AutoItX3_x64.dll;autoit\lib" --collect-all webview --collect-all discord --upx-dir "C:\Users\Akitosama\Documents\upx-5.1.0-win64" main.py
+pyinstaller --name="Carateebee_Macro" --noconsole --onefile --icon="lib/official_release.ico" --add-data "lib;lib" --add-data "venv_build\Lib\site-packages\autoit\lib\AutoItX3_x64.dll;autoit\lib" --collect-all webview --collect-all discord --upx-dir "C:\Users\Akitosama\Documents\upx-5.1.0-win64" main.py
 ```
 
 ### No UPX flag:
 
 ```bash
-pyinstaller --name="Carateebee_Macro " --noconsole --onefile --noupx --icon="lib/official_release.ico" --add-data "lib;lib" --add-data "venv_build\Lib\site-packages\autoit\lib\AutoItX3_x64.dll;autoit\lib" --collect-all webview --collect-all discord main.py
+pyinstaller --name="Carateebee_Macro" --noconsole --onefile --noupx --icon="lib/official_release.ico" --add-data "lib;lib" --add-data "venv_build\Lib\site-packages\autoit\lib\AutoItX3_x64.dll;autoit\lib" --collect-all webview --collect-all discord main.py
 ```
 
-> Replace my user `Akitosama` with your Windows username and your current directory one mine is "C:\Users\Akitosama\Documents\" for example. The compiled EXE will be in `dist/Carateebee_Macro .exe`.
+> Replace my user `Akitosama` with your Windows username and your current directory one mine is "C:\Users\Akitosama\Documents\" for example. The compiled EXE will be in `dist/Carateebee_Macro.exe`.
 
 **Step 7:** Deactivate the venv when done (optional):
 
@@ -140,7 +140,7 @@ deactivate
 ### Option 2: Nuitka
 
 ```bash
-python -m nuitka --onefile --windows-console-mode=disable --windows-icon-from-ico=lib/official_release.ico --include-data-dir=lib=lib --follow-imports --enable-plugin=pylint-warnings --output-filename=Carateebee_Macro .exe --remove-output --jobs=0 --lto=yes --static-libpython=no main.py
+python -m nuitka --onefile --windows-console-mode=disable --windows-icon-from-ico=lib/official_release.ico --include-data-dir=lib=lib --follow-imports --enable-plugin=pylint-warnings --output-filename=Carateebee_Macro.exe --remove-output --jobs=0 --lto=yes --static-libpython=no main.py
 ```
 
 ---
