@@ -29,12 +29,12 @@ ORIGINAL_ABS_FILE = os.path.abspath(__file__)
 APPDATA_BASE.mkdir(parents=True, exist_ok=True)
 os.chdir(APPDATA_BASE)
 
-_mutex = ctypes.windll.kernel32.CreateMutexW(None, True, "CoteabMacroSingleInstance")
+_mutex = ctypes.windll.kernel32.CreateMutexW(None, True, "carateebeemacroSingleInstance")
 if ctypes.windll.kernel32.GetLastError() == 183:  # ERROR_ALREADY_EXISTS
     _old_pid_arg = None
     try:
-        if "--coteab-old-pid" in sys.argv:
-            _idx = sys.argv.index("--coteab-old-pid")
+        if "--carateebee-old-pid" in sys.argv:
+            _idx = sys.argv.index("--carateebee-old-pid")
             if _idx + 1 < len(sys.argv): _old_pid_arg = int(sys.argv[_idx + 1])
     except Exception:
         pass
@@ -51,12 +51,12 @@ if ctypes.windll.kernel32.GetLastError() == 183:  # ERROR_ALREADY_EXISTS
                 time.sleep(0.5)
 
         ctypes.windll.kernel32.CloseHandle(_mutex)
-        _mutex = ctypes.windll.kernel32.CreateMutexW(None, True, "CoteabMacroSingleInstance")
+        _mutex = ctypes.windll.kernel32.CreateMutexW(None, True, "carateebeemacroSingleInstance")
         if ctypes.windll.kernel32.GetLastError() == 183:
-            ctypes.windll.user32.MessageBoxW(0, "Coteab Macro is already running!\n\nPlease close the existing instance before opening a new one.", "Coteab Macro", 0x30)
+            ctypes.windll.user32.MessageBoxW(0, "Carateebee Macro is already running!\n\nPlease close the existing instance before opening a new one.", "Carateebee Macro", 0x30)
             sys.exit(0)
     else:
-        ctypes.windll.user32.MessageBoxW(0, "Coteab Macro is already running!\n\nPlease close the existing instance before opening a new one.", "Coteab Macro", 0x30)
+        ctypes.windll.user32.MessageBoxW(0, "Carateebee Macro is already running!\n\nPlease close the existing instance before opening a new one.", "Carateebee Macro", 0x30)
         sys.exit(0)
 
 try:
@@ -66,7 +66,7 @@ except Exception as e:
     err_text = str(e)
     if "numpy" in err_text.lower() or "c-extension" in err_text.lower() or "dll" in err_text.lower():
         msg = (
-            "Coteab Macro failed to load required components.\n\n"
+            "Carateebee Macro failed to load required components.\n\n"
             "This is because your computer is missing the standard 'Visual C++ Redistributable (x64)' (i think so).\n\n"
             "Please download and install it from Microsoft's official website and try open the macro again!\n\n"
             f"Error details: {err_text}"
@@ -84,9 +84,9 @@ except Exception as e:
 # i added this so we can easily change macro version upon releases without having to change multiple back-end & front-end behaviours
 # for future people that is reading the open source code, hello :p
 current_version = "umacaratto-2.1.9"
-os.environ["COTEAB_MACRO_VERSION"] = current_version
+os.environ["CARATEEBEE_MACRO_VERSION"] = current_version
 UPDATE_LATEST_RELEASE_API_URL = "https://api.github.com/repos/NotWindyZ/Carateebee-Macro/releases/latest"
-os.environ["COTEAB_UPDATE_API_URL"] = UPDATE_LATEST_RELEASE_API_URL
+os.environ["CARATEEBEE_UPDATE_API_URL"] = UPDATE_LATEST_RELEASE_API_URL
 os.environ["WEBKIT_DISABLE_COMPOSITING_MODE"] = "1" 
 
 _wv2_user_data_base = os.path.join(
@@ -1277,8 +1277,8 @@ def main():
             try:
                 from biome_tracker.core import BiomeTracker
                 tracker = BiomeTracker()
-                canonical = _read_cli_value("--coteab-target", "CoteabMacro.exe")
-                old_pid_raw = _read_cli_value("--coteab-old-pid", "")
+                canonical = _read_cli_value("--carateebee-target", "Carateebee_Macro.exe")
+                old_pid_raw = _read_cli_value("--carateebee-old-pid", "")
                 try: old_pid = int(old_pid_raw) if old_pid_raw else None
                 except Exception: old_pid = None
 

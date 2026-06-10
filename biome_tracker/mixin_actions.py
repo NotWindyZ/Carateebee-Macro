@@ -294,7 +294,7 @@ class ActionsMixin:
         except Exception:
             return False
 
-    def maybe_self_rename_to_canonical_exe(self, canonical_target="carateebeemacro.exe", old_pid=None):
+    def maybe_self_rename_to_canonical_exe(self, canonical_target="Carateebee_Macro.exe", old_pid=None):
         try:
             if not getattr(sys, "frozen", False):
                 return False
@@ -305,7 +305,7 @@ class ActionsMixin:
             if not current_name.lower().endswith(".exe"):
                 return False
 
-            canonical_raw = str(canonical_target or "carateebeemacro.exe").strip() or "carateebeemacro.exe"
+            canonical_raw = str(canonical_target or "Carateebee_Macro.exe").strip() or "Carateebee_Macro.exe"
             if not canonical_raw.lower().endswith(".exe"):
                 canonical_raw += ".exe"
 
@@ -340,10 +340,10 @@ class ActionsMixin:
             print(f"Failed to normalize executable name: {e}")
             return False
 
-    def _download_exe_to_folder(self, download_url, target_dir, asset_name="carateebeemacro.exe"):
+    def _download_exe_to_folder(self, download_url, target_dir, asset_name="Carateebee_Macro.exe"):
         os.makedirs(target_dir, exist_ok=True)
 
-        base_name = os.path.basename(str(asset_name or "").strip()) or "carateebeemacro.exe"
+        base_name = os.path.basename(str(asset_name or "").strip()) or "Carateebee_Macro.exe"
         if not base_name.lower().endswith(".exe"):
             base_name += ".exe"
 
